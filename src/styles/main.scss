@@ -1,0 +1,121 @@
+@import 'variables';
+@import 'header';
+@import 'hero';
+@import 'destaque';
+@import 'biblioteca';
+@import 'loja';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $light-color;
+    font-family: $font-family-secondary;
+}
+
+body {
+    background-color: #141414;
+}
+
+.textColored {
+    color: $primary-color;
+}
+
+.icon-title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 34px;
+
+    img {
+        width: 36px;
+    }
+
+    h2 {
+        margin: 0;
+        margin-left: 12px;
+    }
+}
+
+.jogo_destaque {
+    padding: 0 5.6vw;
+    margin-top: 34px;
+    display: flex;
+    align-items: center;
+
+    @media(max-width: 1555px) {
+        display: none;
+    }
+
+    img {
+        max-width: 50%;
+        margin-right: 24px;
+    }
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.tabs__button {
+    font-family: $font-family-primary;
+    margin-right: 24px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    border-bottom: 6px solid $secondary-color;
+    transition: all .5s ease;
+
+    &--is-active {
+        border-color: $primary-color;
+    }
+}
+
+.add-car {
+    display: flex;
+
+    h4 {
+        background-color: $secondary-color;
+        margin: 0;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px 0 0 8px;
+        justify-content: center;
+    }
+
+    a {
+        text-align: center;
+        background-color: $primary-color;
+        font-size: 24px;
+        color: $secondary-color;
+        text-decoration: none;
+        padding: 6px;
+        border-radius: 0 8px 8px 0;
+        border: 2px solid $primary-color;
+        font-family: $font-family-primary;
+        transition: all .3s ease;
+
+        &:hover {
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+    }
+}
+
+.is-active {
+    display: flex;
+}
+
+footer {
+    padding: 64px;
+    background-color: $secondary-color;
+    color: $light-color;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+}

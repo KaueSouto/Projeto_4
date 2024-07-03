@@ -1,0 +1,49 @@
+.destaque {
+    padding: 5.6vw;
+    align-items: center;
+
+    h2 {
+        font-family: $font-family-primary;
+    }
+
+    &__container {
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 24px;
+
+        @media(max-width: 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media(max-width: 950px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media(max-width: 768px) {
+            display: flex;
+            white-space: nowrap;
+            overflow-x: scroll;
+        }
+    }
+
+    &__item {
+        text-decoration: none;
+
+        @media(max-width: 768px) {
+            div {
+                width: 270px;
+            }
+        }
+
+        p {
+            margin-bottom: 4px;
+        }
+
+        img {
+            max-width: 100%;
+            margin-bottom: 8px;
+
+        }
+    }
+}
